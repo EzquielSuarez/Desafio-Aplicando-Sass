@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background: radial-gradient(circle, rgba(154,134,134,1) 8%, rgba(255,250,250,1) 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*Botón de WhatsApp*/
+.botonWhatsapp{
+    position: fixed;
+    bottom: 3.125rem;
+    right: 1.875rem;
+    z-index: 2;
+}
+header div .logoWsp:hover{
+    border-radius: 50px;
+    background-color: #0ad149;
+}
+
+/*Estilos de HTML de Inicio*/
+.navegacion{
+    background-color: rgba(20,22,24,0.9);
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    position: fixed;
+    opacity: 0.8;
+}
+.enlace{
+    padding: 1.25em 3.125rem;
+}
+
+.navegacion ul{
+    list-style: none;
+}
+
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+
+    display: block;
+    padding: 0.9375rem ;
+    color: white;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.menu > li > a:hover{
+    background-color: crimson;
+    border-radius: 10px;
+}
+
+
+img{
+    width: 100%;
+}
+
+section .imgUno{
+    height: 100vh;
+}
+/*Aplicandi Grid a HTML de inicio*/
+.grid{
+    overflow: hidden;
+    height: auto;
+    display: grid;
+    grid-template-areas: "principal principal principal"
+                         "main main main"
+                         "article article article"
+                         "footer footer footer";
+}
+section{
+    grid-area: principal;
+}
+
+section .imgPrincipal{
+    
+    grid-area: principal;
+    display: flex;
+    flex-direction: row;
+}
+
+main{
+    grid-area: main;
+}
+main .img123{
+    height: 45vh;
+    display: flex;
+    justify-content: space-around;
+    
+}
+main .img1{
+    margin: 10px;
+    border-radius: 6px;
+    
+}
+main .img2{
+    margin: 10px;
+    border-radius: 6px;
+}
+main .img3{
+    margin: 10px;
+    border-radius: 6px;
+}
+
+main .img1:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+    border: 1px solid black;
+}
+main .img2:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+    border: 1px solid black;
+}
+main .img3:hover{
+    transform: scale(1.1);
+    transition: 0.7s;
+    border: 1px solid black;
+    transform: rotate();
+}
+
+article{
+    grid-area: article;
+    margin: 1.25rem;
+}
+article h2{
+    text-align: center;
+    
+}
+article .parrafo{
+    text-align: left;
+    line-height: 1.5em; 
+}
+
+
+/*Estilos de HTML del pie de página*/
+footer{
+    grid-area: footer;
+    background: black;
+    color: white;
+    padding: 2.5rem 0;
+    text-align: center;
+
+}
+/*Responsive en HTML de inicio*/
+@media (max-width: 768px){
+    main .img123{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    header nav .enlace{
+        padding: 6px;
+    }
+    main .img1{
+        width: 31.25rem;
+    }
+    main .img2{
+        width: 31.25rem;
+    }
+    main .img3{
+        width: 31.25rem;
+    }
+    section .imgUno{
+        height: 80vh;
+    }
+}
+@media (max-width: 30rem){
+    article .texto .parrafo{
+        font-size: 0.9375rem;
+    }
+    
+
+    .menu > li > a{
+        padding: 10px;
+        font-size: 15px;
+    }
+    main .img1{
+        width: 25rem;
+    }
+    main .img2{
+        width: 25rem;
+    }
+    main .img3{
+        width: 25rem;
+    }
+    section .imgUno{
+        height: 50vh;
+    }
+    
+}
+
+
+/*Estilos de HTML de Empresa*/
+main .empresa h4{
+    color: crimson;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.562rem;
+}
+main .empresa{
+    padding: 12.5rem;
+    line-height: 2;
+    
+}
+
+
+/*Estilos de HTML de Productos*/
+/*Aplicando GRID y Responsive*/
+
+.gridProducto{
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)) ;
+    grid-template-columns: minmax(200px, auto);
+    gap: 20px;
+    padding: 100x;
+    justify-content: center;
+}
+
+main .imagen1{
+    
+    width: auto;
+    height: 300px;
+}
+main .imagen2{
+    
+    width: auto;
+    height: 20rem;
+}
+main .imagen3{
+    
+    width: auto;
+    height: 20rem;
+}
+main .imagen4{
+    
+    width: auto;
+    height: 20rem;
+}
+main .imagen5{
+    
+    width: auto;
+    height: 20rem;
+}
+main .imagen6{
+    width: auto;
+    height: 20rem;
+}
+
+
+/*Estilos de HTML de Servicios*/
+main .servicios h4{
+    color: crimson;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1.5625rem;
+}
+
+main .servicios{
+    padding: 12.5rem;
+    line-height: 2;
+}
+
+/*Estilos de HTML de Contacto*/
+main .contactenos{
+    background-color: #eaeae3;
+    text-align: center;
+    padding: 6.25em;
+    font-size: 1.5em;
+}
+
+main form .formulario{
+    margin: 50px;
+}

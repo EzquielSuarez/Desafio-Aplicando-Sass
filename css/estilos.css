@@ -1,0 +1,139 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+/*Estilos de HTML en menu de Navegación, Botón de WhastApp*/
+header .botonWhatsapp {
+  position: fixed;
+  bottom: 3.125rem;
+  right: 1.875rem;
+  z-index: 2; }
+  header .botonWhatsapp:hover {
+    border-radius: 50px;
+    background-color: #0ad149; }
+
+header .navegacion {
+  background-color: rgba(20, 22, 24, 0.9);
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  opacity: 0.8; }
+
+header .enlace {
+  padding: 1.25em 3.125rem; }
+
+header ul {
+  list-style: none; }
+  header ul li {
+    position: relative;
+    display: inline-block; }
+    header ul li a {
+      display: block;
+      padding: 0.9375rem;
+      color: white;
+      font-size: 0.9375rem;
+      text-decoration: none;
+      text-transform: uppercase; }
+      header ul li a:hover {
+        background-color: crimson;
+        border-radius: 10px; }
+
+/*Aplicando Grid a HTML y estilos en Imagenes, Texto y Footer*/
+.grid {
+  overflow: hidden;
+  height: auto;
+  display: grid;
+  grid-template-areas: "principal principal principal" "main main main" "article article article" "footer footer footer"; }
+  .grid .imgPrincipal {
+    grid-area: principal;
+    display: flex;
+    flex-direction: row; }
+    .grid .imgPrincipal img {
+      width: 100%;
+      height: 100vh; }
+  .grid main {
+    grid-area: main; }
+    .grid main .img123 {
+      height: 45vh;
+      display: flex;
+      justify-content: space-around; }
+    .grid main .img1 {
+      margin: 10px;
+      border-radius: 6px; }
+      .grid main .img1:hover {
+        transform: scale(1.05);
+        transition: 0.7s;
+        border: 1px solid black; }
+    .grid main .img2 {
+      margin: 10px;
+      border-radius: 6px; }
+      .grid main .img2:hover {
+        transform: scale(1.05);
+        transition: 0.7s;
+        border: 1px solid black; }
+    .grid main .img3 {
+      margin: 10px;
+      border-radius: 6px; }
+      .grid main .img3:hover {
+        transform: scale(1.05);
+        transition: 0.7s;
+        border: 1px solid black; }
+  .grid article {
+    grid-area: article;
+    margin: 1.25rem; }
+    .grid article .texto h2 {
+      text-align: center; }
+    .grid article .texto .parrafo {
+      text-align: left;
+      line-height: 1.5em; }
+  .grid footer {
+    grid-area: footer;
+    background: black;
+    color: white;
+    padding: 2.5rem 0;
+    text-align: center; }
+
+/*Estilos de HTML de Productos*/
+/*Aplicando GRID*/
+.gridProducto {
+  padding-top: 120px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: minmax(200px, auto);
+  gap: 20px;
+  padding: 100x;
+  justify-content: center; }
+  .gridProducto .imagenProductos img {
+    width: auto;
+    height: 20rem; }
+
+/*Responsive en HTML de inicio*/
+@media (max-width: 768px) {
+  header nav .enlace {
+    padding: 6px; }
+  .grid section .imgUno {
+    height: 80vh; }
+  main .img123 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    main .img123 img {
+      width: 31.25rem; }
+  section .imgUno {
+    height: 80vh; } }
+
+@media (max-width: 30rem) {
+  article .texto .parrafo {
+    font-size: 0.9375rem; }
+  .grid section .imgUno {
+    height: 50vh; }
+  .menu > li > a {
+    padding: 10px;
+    font-size: 15px; }
+  main .img123 img {
+    width: 25rem; } }
